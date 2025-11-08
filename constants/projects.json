@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Enterprise Dashboard",
+    "description": "Full-stack analytics platform with real-time data visualization and custom reporting",
+    "tech": ["React", "Node.js", "PostgreSQL", "D3.js"],
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80"
+  },
+  {
+    "title": "E-Commerce Platform",
+    "description": "Modern shopping experience with advanced search, payment integration, and inventory management",
+    "tech": ["Next.js", "Stripe", "MongoDB", "Tailwind"],
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"
+  },
+  {
+    "title": "AI Integration Suite",
+    "description": "Custom API wrapper and interface for machine learning model deployment",
+    "tech": ["Python", "FastAPI", "TensorFlow", "Docker"],
+    "image": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&q=80"
+  }
+]
