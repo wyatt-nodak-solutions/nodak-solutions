@@ -1,7 +1,5 @@
 "use client";
-import projects from "@/constants/projects.json";
 import skills from "@/constants/skills.json";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import {
   LuCode,
@@ -46,10 +44,10 @@ export default function Portfolio() {
                   Home
                 </a>
                 <a
-                  href="#projects"
+                  href="#services"
                   className="hover:text-cyan-400 transition-colors"
                 >
-                  Projects
+                  Services
                 </a>
                 <a
                   href="#about"
@@ -86,11 +84,11 @@ export default function Portfolio() {
                 Home
               </a>
               <a
-                href="#projects"
+                href="#services"
                 className="hover:text-cyan-400 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Projects
+                Services
               </a>
               <a
                 href="#about"
@@ -144,10 +142,10 @@ export default function Portfolio() {
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <a
-              href="#projects"
+              href="#services"
               className="bg-linear-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white px-8 py-3 rounded-lg font-semibold transition-all transform hover:scale-105"
             >
-              View Projects
+              View Services
             </a>
             <a
               href="#contact"
@@ -159,86 +157,56 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Services Preview */}
-      <section className="py-20 px-6 bg-slate-900/50">
+      {/* Services */}
+      <section id="services" className="py-20 px-6 bg-slate-900/50">
         <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold mb-4 text-center">
+            What I Build
+          </h2>
+          <p className="text-slate-400 text-center mb-12 max-w-2xl mx-auto">
+            From simple business websites to complex web applications, I deliver
+            solutions tailored to your needs
+          </p>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="p-6 rounded-xl bg-linear-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-cyan-400/50 transition-all">
               <LuCode className="text-cyan-400 mb-4" size={32} />
-              <h3 className="text-xl font-bold mb-2">Custom Development</h3>
-              <p className="text-slate-400">
-                Tailored web applications built with modern frameworks and best
-                practices
+              <h3 className="text-xl font-bold mb-2">Business Websites</h3>
+              <p className="text-slate-400 mb-4">
+                Professional, responsive websites that establish your online
+                presence and attract customers
               </p>
+              <ul className="text-sm text-slate-500 space-y-1">
+                <li>- Local business sites</li>
+                <li>- Landing pages</li>
+                <li>- Portfolio sites</li>
+              </ul>
             </div>
             <div className="p-6 rounded-xl bg-linear-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-blue-400/50 transition-all">
               <LuZap className="text-blue-400 mb-4" size={32} />
-              <h3 className="text-xl font-bold mb-2">
-                Performance Optimization
-              </h3>
-              <p className="text-slate-400">
-                Speed up existing applications and improve user experience
+              <h3 className="text-xl font-bold mb-2">Web Applications</h3>
+              <p className="text-slate-400 mb-4">
+                Custom applications with user authentication, databases, and
+                interactive features
               </p>
+              <ul className="text-sm text-slate-500 space-y-1">
+                <li>- Dashboards & admin panels</li>
+                <li>- Booking systems</li>
+                <li>- Customer portals</li>
+              </ul>
             </div>
             <div className="p-6 rounded-xl bg-linear-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-purple-400/50 transition-all">
               <LuLayers className="text-purple-400 mb-4" size={32} />
-              <h3 className="text-xl font-bold mb-2">Full-Stack Solutions</h3>
-              <p className="text-slate-400">
-                End-to-end development from database to deployment
+              <h3 className="text-xl font-bold mb-2">E-Commerce</h3>
+              <p className="text-slate-400 mb-4">
+                Online stores with payment processing, inventory management, and
+                order tracking
               </p>
+              <ul className="text-sm text-slate-500 space-y-1">
+                <li>- Product catalogs</li>
+                <li>- Shopping carts</li>
+                <li>- Payment integration</li>
+              </ul>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Projects Section */}
-      <section id="projects" className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-4 text-center">
-            Featured Projects
-          </h2>
-          <p className="text-slate-400 text-center mb-12 max-w-2xl mx-auto">
-            A selection of recent work showcasing technical expertise and
-            problem-solving capabilities
-          </p>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, idx) => (
-              <div
-                key={idx}
-                className="group rounded-xl overflow-hidden bg-slate-900 border border-slate-800 hover:border-cyan-400/50 transition-all hover:transform hover:scale-105"
-              >
-                <div className="relative aspect-video overflow-hidden">
-                  <Image
-                    fill
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-cyan-400 transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-slate-400 mb-4 text-sm">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tech.map((tech, i) => (
-                      <span
-                        key={i}
-                        className="text-xs bg-slate-800 text-slate-300 px-3 py-1 rounded-full"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="text-slate-500 text-sm italic">
-                    Project details coming soon
-                  </div>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -332,7 +300,7 @@ export default function Portfolio() {
 
           <div className="border-t border-slate-800 pt-8">
             <p className="text-slate-500 text-sm">
-              © 2024 NoDak Solutions. Building the future, one line of code at
+              © 2025 NoDak Solutions. Building the future, one line of code at
               a time.
             </p>
           </div>
