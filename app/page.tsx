@@ -2,7 +2,9 @@
 import skills from "@/constants/skills.json";
 import { useEffect, useState } from "react";
 import {
+  LuBrain,
   LuCode,
+  LuCodeXml,
   LuGithub,
   LuLayers,
   LuLinkedin,
@@ -30,8 +32,11 @@ export default function Portfolio() {
       >
         <div className="max-w-6xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <div className="text-2xl font-bold bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              NoDak Solutions
+            <div className="flex items-center gap-2">
+              <LuCodeXml size={32} className="text-cyan-400" />
+              <span className="text-2xl font-bold text-cyan-400">
+                NoDak Solutions
+              </span>
             </div>
 
             {/* Desktop Menu - Always visible on md and up */}
@@ -132,13 +137,14 @@ export default function Portfolio() {
           </div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
             Building Digital
-            <span className="block bg-linear-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
+            <span className="block bg-linear-to-r from-emerald-400 via-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
               Solutions That Scale
             </span>
           </h1>
           <p className="text-xl text-slate-400 mb-12 max-w-2xl mx-auto">
-            Full-stack developer crafting modern web applications with clean
-            code, innovative design, and performance-first architecture
+            Full-stack developer crafting modern web applications and AI-powered
+            solutions with clean code, innovative design, and performance-first
+            architecture
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <a
@@ -160,14 +166,25 @@ export default function Portfolio() {
       {/* Services */}
       <section id="services" className="py-20 px-6 bg-slate-900/50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-4 text-center">
-            What I Build
-          </h2>
+          <h2 className="text-4xl font-bold mb-4 text-center">What I Build</h2>
           <p className="text-slate-400 text-center mb-12 max-w-2xl mx-auto">
             From simple business websites to complex web applications, I deliver
             solutions tailored to your needs
           </p>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="p-6 rounded-xl bg-linear-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-emerald-400/50 transition-all">
+              <LuBrain className="text-emerald-400 mb-4" size={32} />
+              <h3 className="text-xl font-bold mb-2">AI Integration</h3>
+              <p className="text-slate-400 mb-4">
+                Intelligent solutions powered by AI to automate tasks and
+                enhance user experiences
+              </p>
+              <ul className="text-sm text-slate-500 space-y-1">
+                <li>- AI chatbots & assistants</li>
+                <li>- Content generation</li>
+                <li>- Process automation</li>
+              </ul>
+            </div>
             <div className="p-6 rounded-xl bg-linear-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-cyan-400/50 transition-all">
               <LuCode className="text-cyan-400 mb-4" size={32} />
               <h3 className="text-xl font-bold mb-2">Business Websites</h3>
