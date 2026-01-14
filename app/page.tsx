@@ -34,9 +34,7 @@ export default function Portfolio() {
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-2">
               <LuCodeXml size={32} className="text-cyan-400" />
-              <span className="text-2xl font-bold text-cyan-400">
-                NoDak Solutions
-              </span>
+              <span className="text-2xl font-bold">NoDak Solutions</span>
             </div>
 
             {/* Desktop Menu - Always visible on md and up */}
