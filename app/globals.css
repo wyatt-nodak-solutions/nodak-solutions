@@ -97,10 +97,6 @@ body {
     animation: none;
   }
 }
-@media (prefers-reduced-motion: reduce) {
-  .hero-slam,
-  .hero-glitch {
-    animation: none;
 @keyframes marquee {
   from {
     transform: translateX(100%);
