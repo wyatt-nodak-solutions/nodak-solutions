@@ -29,7 +29,38 @@ body {
     opacity: 0;
   }
 }
- 80% {
+.hero-slam {
+  animation: hero-slam 0.6s cubic-bezier(0.2, 1.6, 0.4, 1) both;
+}
+
+.hero-glitch {
+  background: linear-gradient(to right, #34d399, #22d3ee, #3b82f6, #a855f7);
+  background-clip: text;
+  color: transparent;
+  animation: hero-glitch 3s steps(1, end) 0.6s infinite;
+}
+
+@keyframes hero-slam {
+  from {
+    transform: scale(3);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes hero-glitch {
+  0%,
+  79%,
+  90%,
+  100% {
+    transform: none;
+    filter: none;
+  }
+
+  80% {
     transform: translateX(-0.08em) skewX(-12deg);
     filter: drop-shadow(4px 0 #22d3ee) drop-shadow(-4px 0 #ec4899);
   }
@@ -48,6 +79,9 @@ body {
   .hero-slam,
   .hero-glitch {
     animation: none;
+  }
+}
+
 @keyframes marquee {
   from {
     transform: translateX(100%);
