@@ -1,10 +1,11 @@
 "use client";
+import Image from "next/image";
+import logo from "@/public/nodak-solutions-logo.webp";
 import skills from "@/constants/skills.json";
 import { useEffect, useState } from "react";
 import {
   LuBrain,
   LuCode,
-  LuCodeXml,
   LuGithub,
   LuLayers,
   LuLinkedin,
@@ -30,12 +31,22 @@ export default function Portfolio() {
       <nav
         className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? "bg-slate-950/90 backdrop-blur-lg border-b border-slate-800" : "bg-transparent"}`}
       >
-        <div className="max-w-6xl mx-auto px-6 py-4">
+        <div className="max-w-6xl mx-auto px-6 py-2">
           <div className="flex justify-between items-center">
-            <div className="flex items-center gap-2">
-              <LuCodeXml size={32} className="text-cyan-400" />
-              <span className="text-2xl font-bold">NoDak Solutions</span>
-            </div>
+            <a
+              href="#home"
+              aria-label="NoDak Solutions home"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block shrink-0 rounded-md focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-400"
+            >
+              <Image
+                src={logo}
+                alt="NoDak Solutions"
+                loading="eager"
+                unoptimized
+                className="block h-auto w-48 rounded-md md:w-56"
+              />
+            </a>
 
             {/* Desktop Menu - Always visible on md and up */}
             <div className="hidden md:block">
